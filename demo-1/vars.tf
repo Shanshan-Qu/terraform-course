@@ -1,19 +1,20 @@
-variable "AWS_ACCESS_KEY" {
+variable "account" {
+  default = "514211533206"
 }
 
-variable "AWS_SECRET_KEY" {
+variable "Account" {
+  default = "uoa-sandbox"
 }
 
 variable "AWS_REGION" {
-  default = "eu-west-1"
+  default = "ap-southeast-2"
 }
 
 variable "AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-06b94666"
-    eu-west-1 = "ami-0d729a60"
+    //Amazon Linux 2 AMI (HVM), SSD Volume Type
+    ap-southeast-2 = "ami-08a74056dfd30c986"
   }
 }
 
