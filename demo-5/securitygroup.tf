@@ -1,10 +1,11 @@
 data "aws_ip_ranges" "european_ec2" {
-  regions  = ["eu-west-1", "eu-central-1"]
+  regions  = ["ap-southeast-2"]
   services = ["ec2"]
 }
 
-resource "aws_security_group" "from_europe" {
-  name = "from_europe"
+resource "aws_security_group" "from_sydney" {
+  name = "from_sydney"
+  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = "443"
