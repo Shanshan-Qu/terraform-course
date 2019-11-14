@@ -1,4 +1,4 @@
 provider "aws" {
-  region = var.AWS_REGION
+  profile = var.Account
+  region  = var.AWS_REGION
 }
-
